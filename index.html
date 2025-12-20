@@ -15,10 +15,7 @@
     color: #333;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  a { text-decoration: none; color: inherit; }
 
   /* Sidebar */
   .sidebar {
@@ -34,10 +31,11 @@
   }
 
   .sidebar img {
-    width: 120px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     display: block;
-    margin-bottom: 20px;
-    border-radius: 50%; /* optional: makes it circular */
+    margin-bottom: 15px;
   }
 
   .sidebar h1 {
@@ -50,9 +48,8 @@
     font-size: 14px;
   }
 
-  .sidebar a:hover {
-    text-decoration: underline;
-  }
+  .sidebar a { color: #fff; }
+  .sidebar a:hover { text-decoration: underline; }
 
   .section-title {
     margin-top: 25px;
@@ -72,9 +69,7 @@
     transition: 0.3s;
   }
 
-  .menu a:hover {
-    background-color: #162447;
-  }
+  .menu a:hover { background-color: #162447; }
 
   /* Main Content */
   .main-content {
@@ -94,21 +89,9 @@
     margin-bottom: 20px;
   }
 
-  .job-title, .project-title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-
-  .job-company, .project-role {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 8px;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
+  .job-title, .project-title { font-weight: bold; font-size: 18px; margin-bottom: 5px; }
+  .job-company, .project-role { font-style: italic; color: #555; margin-bottom: 8px; }
+  ul { margin-left: 20px; }
 
   /* Buttons */
   .btn {
@@ -121,9 +104,7 @@
     margin-top: 10px;
   }
 
-  .btn:hover {
-    background-color: #162447;
-  }
+  .btn:hover { background-color: #162447; }
 
   /* Responsive */
   @media(max-width: 900px) {
@@ -137,8 +118,8 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
-  <!-- Logo -->
-  <img src="Image Dec 20, 2025, 06_20_04 PM.png" alt="Mansi Sangani Logo">
+  <!-- Website Logo -->
+  <img src="logo.png" alt="Mansi Sangani Logo">
 
   <h1>Mansi Sangani</h1>
   <p>📞 551-998-8926</p>
@@ -168,7 +149,6 @@
 
 <!-- Main Content -->
 <div class="main-content">
-
   <!-- Education -->
   <div class="section">
     <h2>Education</h2>
@@ -180,7 +160,6 @@
   <!-- Experience -->
   <div class="section">
     <h2>Experience</h2>
-
     <p class="job-title">IT Support / Help Desk Technician</p>
     <p class="job-company">Hudson County Community College | Aug 2025 – Present</p>
     <ul>
@@ -201,7 +180,6 @@
   <!-- Projects -->
   <div class="section">
     <h2>Academic / Personal Projects</h2>
-
     <p class="project-title">Automated Code Review Tool</p>
     <p class="project-role">Mar 2024 – Aug 2024</p>
     <ul>
@@ -223,7 +201,6 @@
       <li>Built foundation for compiler and interpreter development.</li>
     </ul>
   </div>
-
 </div>
 
 </body>
