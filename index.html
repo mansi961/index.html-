@@ -14,38 +14,21 @@
     background-color: #f4f4f4;
   }
 
-  /* Sidebar */
   .sidebar {
     width: 300px;
     background-color: #1c1c1c;
     color: #fff;
     padding: 30px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
   }
 
-  .sidebar h1 {
-    margin: 0;
-    font-size: 28px;
-  }
-
-  .sidebar p {
-    margin: 8px 0;
-  }
-
-  .sidebar a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .sidebar a:hover {
-    text-decoration: underline;
-  }
+  .sidebar h1 { font-size: 28px; margin: 0; }
+  .sidebar p { margin: 8px 0; }
+  .sidebar a { color: #fff; text-decoration: none; }
+  .sidebar a:hover { text-decoration: underline; }
 
   .section-title {
     margin-top: 20px;
-    font-weight: bold;
     font-size: 18px;
     border-bottom: 1px solid #555;
     padding-bottom: 5px;
@@ -53,66 +36,37 @@
 
   .menu a {
     display: block;
-    margin: 5px 0;
-    padding: 6px 10px;
-    background-color: #1f4068;
-    border-radius: 5px;
-    font-weight: 500;
+    margin: 6px 0;
+    padding: 8px;
+    background: #1f4068;
+    border-radius: 6px;
+    font-weight: bold;
   }
 
-  .menu a:hover {
-    background-color: #162447;
-  }
+  .menu a:hover { background: #162447; }
 
-  /* Main Content */
   .main-content {
     flex: 1;
     padding: 40px;
-    background-color: #fff;
-    box-sizing: border-box;
+    background: #fff;
   }
 
-  .section {
-    margin-bottom: 40px;
-  }
-
+  .section { margin-bottom: 40px; }
   .section h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
     border-bottom: 2px solid #1c1c1c;
     display: inline-block;
     padding-bottom: 5px;
   }
 
-  .job-title, .project-title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .job-company, .project-role {
-    font-style: italic;
-    color: #555;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
-
-  @media (max-width: 900px) {
-    body {
-      flex-direction: column;
-    }
-    .sidebar {
-      width: 100%;
-      text-align: center;
-    }
+  @media(max-width: 900px){
+    body { flex-direction: column; }
+    .sidebar { width: 100%; text-align: center; }
   }
 </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
   <h1>Mansi Sangani</h1>
   <p>📞 551-998-8926</p>
@@ -121,94 +75,29 @@
   <p>🔗 <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">LinkedIn</a></p>
   <p>💻 <a href="https://github.com/mansi961" target="_blank">GitHub</a></p>
 
-  <div class="section-title">Objective</div>
-  <p>
-    Seeking a challenging role in IT where I can apply my skills in technical support,
-    troubleshooting, and web applications to improve system efficiency and user experience.
-  </p>
-
-  <div class="section-title">Skills</div>
-  <p><strong>Programming:</strong> Python, Java, C++, C, HTML, CSS, JavaScript, Unity</p>
-  <p><strong>IT & Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking, Help Desk</p>
-  <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
-
   <div class="section-title">Navigation</div>
   <div class="menu">
-    <a href="#education">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">All Posts</a>
-    <a href="#certifications">Certifications</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">All Posts</a>
+    <a href="certifications.html">Certifications</a>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main-content">
 
-  <!-- EDUCATION -->
-  <div class="section" id="education">
+  <div class="section">
     <h2>Education</h2>
     <p><strong>B.S. Information Technology (Web Applications)</strong></p>
-    <p>New Jersey Institute of Technology | Spring 2026 | GPA: 3.0</p>
-    <p>Dean’s List (Spring 2025) | EOP Student</p>
+    <p>New Jersey Institute of Technology | Spring 2026</p>
   </div>
 
-  <!-- ABOUT -->
-  <div class="section" id="about">
-    <h2>About Me</h2>
-    <p><em>"Consistency, curiosity, and continuous learning define my approach to technology."</em></p>
-
-    <p>
-      I am a final-year Information Technology student at NJIT with strong experience in IT support,
-      troubleshooting, and user-focused technical assistance.
-    </p>
-
-    <p>
-      Currently, I work as an IT Support / Help Desk Technician at Hudson County Community College,
-      assisting students and faculty with hardware, software, and classroom technology issues.
-    </p>
-
-    <p>
-      Alongside IT support, I have developed technical projects using Python, Java, C++, and web
-      technologies, focusing on automation and system efficiency.
-    </p>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <div class="section" id="experience">
+  <div class="section">
     <h2>Experience</h2>
-
-    <p class="job-title">IT Support / Help Desk Technician</p>
-    <p class="job-company">Hudson County Community College | Aug 2025 – Present</p>
-    <ul>
-      <li>Provided technical support for Windows and macOS systems</li>
-      <li>Maintained classroom and projector technology</li>
-      <li>Resolved login, account, and connectivity issues</li>
-    </ul>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section" id="projects">
-    <h2>Projects</h2>
-
-    <p class="project-title">Automated Code Review Tool</p>
-    <ul>
-      <li>Improved collaboration by 30%</li>
-      <li>Reduced production errors by up to 30%</li>
-    </ul>
-
-    <p class="project-title">MCL Language Parser</p>
-    <ul>
-      <li>Built C++ parser for custom programming language</li>
-    </ul>
-  </div>
-
-  <!-- CERTIFICATIONS -->
-  <div class="section" id="certifications">
-    <h2>Certifications</h2>
-    <p>Coming soon</p>
+    <p><strong>IT Support / Help Desk Technician</strong></p>
+    <p>Hudson County Community College</p>
   </div>
 
 </div>
-
 </body>
 </html>
