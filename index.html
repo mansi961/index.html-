@@ -22,8 +22,8 @@
     .skills span {display:inline-block; background:#1f4068; color:#fff; padding:0.3rem 0.6rem; margin:0.2rem; border-radius:5px; font-size:0.9rem;}
     a {color:#1f4068; text-decoration:none;}
     a:hover {text-decoration:underline;}
-    .menu a {display:inline-block; margin:0.2rem 0.5rem 0.2rem 0; padding:0.3rem 0.6rem; background:#1f4068; color:#fff; border-radius:5px; font-weight:500;}
-    .menu a:hover {background:#162447;}
+    .menu a {display:block; margin:0.3rem 0; font-weight:500;}
+    .project {margin-bottom:1.5rem;}
     @media(max-width:900px){.container{flex-direction:column;}}
   </style>
 </head>
@@ -40,7 +40,7 @@
     <!-- Left Side -->
     <div class="left">
       <h2>Objective</h2>
-      <p>Motivated final-year IT student with hands-on experience in IT support, help desk operations, and technical troubleshooting. Seeking to leverage technical expertise to contribute to efficient and secure IT operations. Eager to apply skills in IT support, troubleshooting, and web applications to improve system reliability and user experience.</p>
+      <p>Seeking a challenging role in the field of IT and computer science where I can apply my technical skills in programming, IT support, troubleshooting, and web application development to contribute to innovative projects and enhance system efficiency. Eager to leverage hands-on experience with IT operations and software tools to drive positive outcomes for the organization.</p>
 
       <h2>Skills</h2>
       <p><strong>Programming Languages:</strong></p>
@@ -51,19 +51,22 @@
         <span>C</span>
         <span>HTML</span>
         <span>CSS</span>
-        <span>Unity</span>
+        <span>JavaScript</span>
       </div>
-      <p><strong>IT & Tools / Technologies:</strong></p>
+
+      <p><strong>Technologies / Tools:</strong></p>
       <div class="skills">
+        <span>Unity</span>
         <span>Windows/macOS Troubleshooting</span>
         <span>Microsoft Office</span>
         <span>Git</span>
         <span>Basic Networking</span>
         <span>Help Desk Support</span>
       </div>
+
       <p><strong>Languages Spoken:</strong> English (Advanced), Hindi (Native), Gujarati (Intermediate)</p>
 
-      <!-- Navigation Menu after Languages Spoken -->
+      <!-- Navigation -->
       <div class="menu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -74,14 +77,14 @@
 
     <!-- Right Side -->
     <div class="right">
-      <h2>Education</h2>
+      <h2 id="home">Education</h2>
       <div>
         <h3>Bachelor of Science – Information Technology (Web Applications)</h3>
         <p>New Jersey Institute of Technology, Newark, NJ | Expected Graduation: Spring 2026 | GPA: 3.0</p>
         <p>Dean's List (Spring 2025) | EOP Student</p>
       </div>
 
-      <h2>Experience</h2>
+      <h2 id="about">Experience</h2>
       <div>
         <h3>IT Support / Help Desk Technician</h3>
         <p>Hudson County Community College, Jersey City, NJ | Aug 2025 – Present</p>
@@ -102,19 +105,22 @@
         </ul>
       </div>
 
-      <h2>Projects</h2>
-      <div>
-        <h3>Automated Code Review Tool – Team Lead | Mar 2024 – Aug 2024</h3>
+      <h2 id="posts">Personal / Academic Projects</h2>
+      <div class="project">
+        <h3>Automated Code Review Tool – Team Lead</h3>
         <p>Developed a GitHub-integrated tool providing instant feedback on code changes. Improved collaboration by 30% and reduced production errors by 25–30%.</p>
       </div>
-      <div>
-        <h3>Building Parser for MCL Language – Developer | Mar 2024 – Aug 2024</h3>
+      <div class="project">
+        <h3>Building Parser for MCL Language – Developer</h3>
         <p>Created a C++ program to parse a custom programming language into machine-readable instructions, laying the foundation for compiler/interpreter development.</p>
       </div>
-      <div>
-        <h3>Satellite Classification System – Developer | Jun 2023 – Aug 2023</h3>
+      <div class="project">
+        <h3>Satellite Classification System – Developer</h3>
         <p>Designed a Java application retrieving and analyzing satellite data from the CelesTrak API. Automated data extraction and analysis, reducing manual effort.</p>
       </div>
+
+      <h2 id="certifications">Certifications</h2>
+      <p>No certifications listed yet.</p>
     </div>
 
   </div>
