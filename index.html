@@ -14,15 +14,15 @@
     background-color: #f4f4f4;
   }
 
+  /* Sidebar */
   .sidebar {
     width: 300px;
     background-color: #1c1c1c;
     color: #fff;
     padding: 30px;
-    box-sizing: border-box;
   }
 
-  .sidebar h1 { font-size: 28px; margin: 0; }
+  .sidebar h1 { margin: 0; font-size: 28px; }
   .sidebar p { margin: 8px 0; }
   .sidebar a { color: #fff; text-decoration: none; }
   .sidebar a:hover { text-decoration: underline; }
@@ -45,20 +45,54 @@
 
   .menu a:hover { background: #162447; }
 
+  /* Main content */
   .main-content {
     flex: 1;
     padding: 40px;
     background: #fff;
   }
 
-  .section { margin-bottom: 40px; }
+  .section {
+    margin-bottom: 40px;
+  }
+
   .section h2 {
     border-bottom: 2px solid #1c1c1c;
     display: inline-block;
     padding-bottom: 5px;
   }
 
-  @media(max-width: 900px){
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+    max-width: 800px;
+  }
+
+  .skill-list {
+    margin-left: 20px;
+  }
+
+  .project {
+    margin-bottom: 20px;
+  }
+
+  .project-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .project-role {
+    font-style: italic;
+    color: #555;
+  }
+
+  @media(max-width:900px){
     body { flex-direction: column; }
     .sidebar { width: 100%; text-align: center; }
   }
@@ -67,6 +101,7 @@
 
 <body>
 
+<!-- SIDEBAR -->
 <div class="sidebar">
   <h1>Mansi Sangani</h1>
   <p>📞 551-998-8926</p>
@@ -84,20 +119,78 @@
   </div>
 </div>
 
+<!-- MAIN CONTENT -->
 <div class="main-content">
 
+  <!-- INTRO / SUMMARY -->
+  <div class="section">
+    <div class="title">Mansi Sangani</div>
+    <p class="subtitle">
+      Seeking a challenging role in the field of Information Technology where I can apply my
+      skills in IT support, troubleshooting, networking, and web application development to
+      contribute to reliable systems and positive user experiences. Eager to leverage hands-on
+      experience to improve efficiency and support organizational goals.
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Skills</h2>
+
+    <p><strong>Programming Languages:</strong></p>
+    <ul class="skill-list">
+      <li>Python, Java, C++, C</li>
+      <li>HTML, CSS, JavaScript, Unity</li>
+    </ul>
+
+    <p><strong>Technologies / Tools:</strong></p>
+    <ul class="skill-list">
+      <li>Git, Windows/macOS, Microsoft Office</li>
+      <li>Basic Networking, Help Desk Support</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION -->
   <div class="section">
     <h2>Education</h2>
-    <p><strong>B.S. Information Technology (Web Applications)</strong></p>
+    <p><strong>Bachelor of Science – Information Technology (Web Applications)</strong></p>
     <p>New Jersey Institute of Technology | Spring 2026</p>
   </div>
 
+  <!-- EXPERIENCE -->
   <div class="section">
     <h2>Experience</h2>
+
     <p><strong>IT Support / Help Desk Technician</strong></p>
     <p>Hudson County Community College</p>
   </div>
 
+  <!-- PROJECTS PREVIEW -->
+  <div class="section">
+    <h2>Personal / Academic Projects</h2>
+
+    <div class="project">
+      <p class="project-title">Automated Code Review Tool</p>
+      <p class="project-role">Team Lead</p>
+      <p>
+        Developed a GitHub-integrated tool to provide instant feedback on code changes,
+        improving collaboration and reducing production errors.
+      </p>
+    </div>
+
+    <div class="project">
+      <p class="project-title">MCL Language Parser</p>
+      <p class="project-role">Developer</p>
+      <p>
+        Built a C++ parser for a custom programming language, laying the foundation for
+        compiler and interpreter development.
+      </p>
+    </div>
+
+    <p><a href="projects.html"><strong>Learn more →</strong></a></p>
+  </div>
+
 </div>
+
 </body>
 </html>
