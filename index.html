@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mansi Sangani | IT Portfolio</title>
-  <!-- Example Website Logo -->
-  <img src="https://via.placeholder.com/60x60.png?text=Logo" alt="Mansi Sangani Logo">
-
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +27,7 @@
     flex-direction: column;
     position: fixed;
     height: 100%;
-    overflow-y: auto; /* scroll if content exceeds height */
+    overflow-y: auto;
   }
 
   .sidebar img {
@@ -45,11 +42,7 @@
     margin-bottom: 10px;
   }
 
-  .sidebar p {
-    margin: 6px 0;
-    font-size: 14px;
-  }
-
+  .sidebar p { margin: 6px 0; font-size: 14px; }
   .sidebar a { color: #fff; }
   .sidebar a:hover { text-decoration: underline; }
 
@@ -61,7 +54,6 @@
     padding-bottom: 5px;
   }
 
-  /* Navigation Menu */
   .menu a {
     display: block;
     margin: 8px 0;
@@ -73,64 +65,33 @@
     transition: 0.3s;
     border: 1px solid #ffffff30;
   }
+  .menu a:hover { background-color: #162447; }
 
-  .menu a:hover {
-    background-color: #162447;
-  }
+  .main-content { margin-left: 320px; padding: 40px; flex: 1; }
 
-  /* Main Content */
-  .main-content {
-    margin-left: 320px;
-    padding: 40px;
-    flex: 1;
-  }
-
-  .section {
-    margin-bottom: 50px;
-  }
-
+  .section { margin-bottom: 50px; }
   .section h2 {
     font-size: 22px;
     border-bottom: 2px solid #1c1c1c;
     padding-bottom: 5px;
     margin-bottom: 20px;
   }
-
-  .job-title, .project-title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .job-company, .project-role {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 8px;
-  }
-
+  .job-title, .project-title { font-weight: bold; font-size: 18px; }
+  .job-company, .project-role { font-style: italic; color: #555; margin-bottom: 8px; }
   ul { margin-left: 20px; }
 
-  /* Responsive */
   @media(max-width: 900px) {
     body { flex-direction: column; }
-    .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      text-align: center;
-    }
-    .main-content {
-      margin-left: 0;
-      padding: 20px;
-    }
+    .sidebar { position: relative; width: 100%; height: auto; text-align: center; }
+    .main-content { margin-left: 0; padding: 20px; }
   }
 </style>
 </head>
-
 <body>
 
 <!-- Sidebar -->
 <div class="sidebar">
-  <img src="logo.png" alt="Mansi Sangani Logo">
+  <img src="https://via.placeholder.com/60x60.png?text=Logo" alt="Mansi Sangani Logo">
 
   <h1>Mansi Sangani</h1>
   <p>📞 551-998-8926</p>
@@ -150,7 +111,6 @@
   <p><strong>Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking, Help Desk</p>
   <p><strong>Languages:</strong> English (Advanced), Hindi (Native), Gujarati (Intermediate)</p>
 
-  <!-- Navigation Menu -->
   <div class="section-title">Navigation</div>
   <div class="menu">
     <a href="index.html">Home</a>
