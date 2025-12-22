@@ -1,199 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mansi Sangani | IT Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansi Sangani | IT Portfolio</title>
 
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    min-height: 100vh;
-    background-color: #f8f9fa;
-    color: #333;
-  }
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      color: #333;
+    }
 
-  a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  /* Sidebar */
-  .sidebar {
-    width: 300px;
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-  }
-
-  .sidebar img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-
-  .sidebar h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
-  .sidebar p {
-    margin: 6px 0;
-    font-size: 14px;
-  }
-
-  .section-title {
-    margin-top: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-  }
-
-  .menu a {
-    display: block;
-    margin: 8px 0;
-    padding: 10px;
-    background-color: #1f4068;
-    border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .menu a:hover {
-    background-color: #162447;
-  }
-
-  /* Main Content */
-  .main-content {
-    margin-left: 320px;
-    padding: 40px;
-    flex: 1;
-  }
-
-  .section {
-    margin-bottom: 50px;
-  }
-
-  .section h2 {
-    font-size: 22px;
-    border-bottom: 2px solid #1c1c1c;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-  }
-
-  ul { margin-left: 20px; }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    body { flex-direction: column; }
+    /* Sidebar */
     .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
+      width: 300px;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+    }
+
+    .sidebar img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .sidebar h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .sidebar a {
+      color: #fff;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      margin-top: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid #555;
+      padding-bottom: 5px;
+    }
+
+    .menu a {
+      display: block;
+      margin: 8px 0;
+      padding: 8px;
+      background-color: #1f4068;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
       text-align: center;
     }
-    .main-content {
-      margin-left: 0;
-      padding: 20px;
+
+    .menu a:hover {
+      background-color: #162447;
     }
-  }
-</style>
+
+    /* Main Content */
+    .main-content {
+      margin-left: 320px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      border-bottom: 2px solid #1c1c1c;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .job-title,
+    .project-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .job-company,
+    .project-role {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <img src="logo.png" alt="Logo">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="logo.png" alt="Mansi Sangani Logo">
 
-  <h1>Mansi Sangani</h1>
-  <p>📞 551-998-8926</p>
-  <p>📍 Jersey City, NJ</p>
-  <p>✉️ <a href="mailto:sanganimansi18@gmail.com">sanganimansi18@gmail.com</a></p>
-  <p>🔗 <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">LinkedIn</a></p>
-  <p>💻 <a href="https://github.com/mansi961" target="_blank">GitHub</a></p>
+    <h1>Mansi Sangani</h1>
+    <p>📞 551-998-8926</p>
+    <p>📍 Jersey City, NJ</p>
+    <p>✉️ <a href="mailto:sanganimansi18@gmail.com">sanganimansi18@gmail.com</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/mansi961" target="_blank">GitHub</a></p>
 
-  <div class="section-title">Objective</div>
-  <p>
-    Motivated IT student seeking an IT Support or Help Desk role.
-    Passionate about troubleshooting and improving system efficiency.
-  </p>
+    <div class="section-title">Objective</div>
+    <p>
+      Motivated final-year Information Technology student seeking a role in IT support,
+      troubleshooting, and web application development.
+    </p>
 
-  <div class="section-title">Skills</div>
-  <p><strong>Programming:</strong> Python, Java, C++, HTML, CSS, JavaScript</p>
-  <p><strong>Tools:</strong> Windows/macOS, Git, Networking, Help Desk</p>
+    <div class="section-title">Skills</div>
+    <p><strong>Programming:</strong> Python, Java, C++, C, HTML, CSS, JavaScript, Unity</p>
+    <p><strong>Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking, Help Desk</p>
+    <p><strong>Languages:</strong> English (Advanced), Hindi (Native), Gujarati (Intermediate)</p>
 
-  <!-- Navigation -->
-  <div class="section-title">Navigation</div>
-  <div class="menu">
-    <a id="backBtn">⬅ Back</a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a id="nextBtn">Next ➡</a>
-  </div>
-</div>
-
-<!-- Main Content -->
-<div class="main-content">
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>B.S. Information Technology (Web Applications)</strong></p>
-    <p>New Jersey Institute of Technology | Spring 2026</p>
-    <p>GPA: 3.0 | Dean’s List</p>
+    <div class="section-title">Navigation</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Experience</h2>
-    <ul>
-      <li>IT Support / Help Desk – Hudson County Community College</li>
-      <li>EOP Mentor – NJIT</li>
-    </ul>
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Education -->
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science – Information Technology (Web Applications)</strong></p>
+      <p>New Jersey Institute of Technology | Expected Graduation: Spring 2026</p>
+      <p>GPA: 3.0 | Dean’s List (Spring 2025) | EOP Student</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <h2>Experience</h2>
+
+      <p class="job-title">IT Support / Help Desk Technician</p>
+      <p class="job-company">Hudson County Community College | Aug 2025 – Present</p>
+      <ul>
+        <li>Provided technical support for classroom technology and user systems.</li>
+        <li>Troubleshot hardware and software issues.</li>
+        <li>Collaborated with IT team to maintain campus operations.</li>
+      </ul>
+
+      <p class="job-title">EOP Mentor & Tutor</p>
+      <p class="job-company">New Jersey Institute of Technology | Jul 2024 – Aug 2024</p>
+      <ul>
+        <li>Mentored 50+ students for academic and personal success.</li>
+        <li>Led workshops on study skills and time management.</li>
+        <li>Managed student schedules for academic planning.</li>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h2>Academic / Personal Projects</h2>
+
+      <p class="project-title">Automated Code Review Tool</p>
+      <p class="project-role">Mar 2024 – Aug 2024</p>
+      <ul>
+        <li>GitHub-integrated tool for instant code feedback.</li>
+        <li>Reduced production errors by 25–30%.</li>
+      </ul>
+
+      <p class="project-title">Satellite Classification System</p>
+      <p class="project-role">Jun 2023 – Aug 2023</p>
+      <ul>
+        <li>Java program using CelesTrak API.</li>
+        <li>Automated satellite data analysis.</li>
+      </ul>
+
+      <p class="project-title">MCL Language Parser</p>
+      <p class="project-role">Mar 2024 – Aug 2024</p>
+      <ul>
+        <li>C++ parser for custom programming language.</li>
+        <li>Foundation for compiler development.</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li>Automated Code Review Tool</li>
-      <li>Satellite Classification System</li>
-      <li>MCL Language Parser</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Navigation Script -->
-<script>
-  const pages = [
-    "index.html",
-    "about.html",
-    "projects.html",
-    "certifications.html"
-  ];
-
-  const currentPage =
-    window.location.pathname.split("/").pop() || "index.html";
-  const currentIndex = pages.indexOf(currentPage);
-
-  document.getElementById("backBtn").onclick = () => {
-    if (currentIndex > 0) {
-      window.location.href = pages[currentIndex - 1];
-    }
-  };
-
-  document.getElementById("nextBtn").onclick = () => {
-    if (currentIndex < pages.length - 1) {
-      window.location.href = pages[currentIndex + 1];
-    }
-  };
-</script>
 
 </body>
 </html>
