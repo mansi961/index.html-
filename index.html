@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mansi Sangani | IT Portfolio</title>
 
+<!-- Website Tab Logo (Favicon) -->
+<link rel="icon" href="logo.png" type="image/png">
+
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,11 +32,13 @@
     position: fixed;
     height: 100%;
     overflow-y: auto;
+    align-items: center;
   }
 
+  /* LOGO STYLE */
   .sidebar img {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
     margin-bottom: 15px;
   }
@@ -41,9 +46,15 @@
   .sidebar h1 {
     font-size: 26px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
-  .sidebar p { margin: 6px 0; font-size: 14px; }
+  .sidebar p {
+    margin: 6px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
   .sidebar a { color: #fff; }
   .sidebar a:hover { text-decoration: underline; }
 
@@ -53,6 +64,12 @@
     font-weight: bold;
     border-bottom: 1px solid #555;
     padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu {
+    width: 100%;
   }
 
   .menu a {
@@ -66,7 +83,10 @@
     transition: 0.3s;
     border: 1px solid #ffffff30;
   }
-  .menu a:hover { background-color: #162447; }
+
+  .menu a:hover {
+    background-color: #162447;
+  }
 
   .main-content {
     margin-left: 320px;
@@ -74,7 +94,6 @@
     flex: 1;
   }
 
-  /* TOP IMAGE STYLE */
   .top-image img {
     width: 100%;
     max-width: 900px;
@@ -83,7 +102,10 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   }
 
-  .section { margin-bottom: 50px; }
+  .section {
+    margin-bottom: 50px;
+  }
+
   .section h2 {
     font-size: 22px;
     border-bottom: 2px solid #1c1c1c;
@@ -102,7 +124,9 @@
     margin-bottom: 8px;
   }
 
-  ul { margin-left: 20px; }
+  ul {
+    margin-left: 20px;
+  }
 
   @media(max-width: 900px) {
     body { flex-direction: column; }
@@ -110,7 +134,6 @@
       position: relative;
       width: 100%;
       height: auto;
-      text-align: center;
     }
     .main-content {
       margin-left: 0;
@@ -124,7 +147,9 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
-  <img src="https://via.placeholder.com/60x60 logo.png?text=Logo" alt="Mansi Sangani Logo">
+
+  <!-- WEBSITE LOGO -->
+  <img src="logo.png" alt="Mansi Sangani Logo">
 
   <h1>Mansi Sangani</h1>
   <p>📞 551-998-8926</p>
@@ -140,9 +165,8 @@
   </p>
 
   <div class="section-title">Skills</div>
-  <p><strong>Programming:</strong> Python, Java, C++, C, HTML, CSS, JavaScript, Unity</p>
-  <p><strong>Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking, Help Desk</p>
-  <p><strong>Languages:</strong> English (Advanced), Hindi (Native), Gujarati (Intermediate)</p>
+  <p><strong>Programming:</strong> Python, Java, C++, C, HTML, CSS, JavaScript</p>
+  <p><strong>Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking</p>
 
   <div class="section-title">Navigation</div>
   <div class="menu">
@@ -156,61 +180,14 @@
 <!-- Main Content -->
 <div class="main-content">
 
-  <!-- IMAGE ADDED HERE -->
   <div class="top-image">
-    <img src="tab-style.png" alt="Browser Tab Style Image">
+    <img src="tab-style.png" alt="Browser Style Image">
   </div>
 
   <div class="section">
     <h2>Education</h2>
-    <p><strong>Bachelor of Science - Information Technology (Web Applications)</strong></p>
-    <p>New Jersey Institute of Technology | Expected Graduation: Spring 2026</p>
-    <p>GPA: 3.0 | Dean's List (Spring 2025) | EOP Student</p>
-  </div>
-
-  <div class="section">
-    <h2>Experience</h2>
-
-    <p class="job-title">IT Support / Help Desk Technician</p>
-    <p class="job-company">Hudson County Community College | Aug 2025 – Present</p>
-    <ul>
-      <li>Provided technical support for classroom technology and user systems.</li>
-      <li>Troubleshot hardware and software issues.</li>
-      <li>Collaborated with IT team to maintain campus operations.</li>
-    </ul>
-
-    <p class="job-title">EOP Mentor & Tutor</p>
-    <p class="job-company">New Jersey Institute of Technology | Jul 2024 – Aug 2024</p>
-    <ul>
-      <li>Mentored 50+ students for academic success.</li>
-      <li>Led workshops on study skills and time management.</li>
-      <li>Managed student schedules.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Academic / Personal Projects</h2>
-
-    <p class="project-title">Automated Code Review Tool</p>
-    <p class="project-role">Mar 2024 – Aug 2024</p>
-    <ul>
-      <li>GitHub-integrated tool for instant code feedback.</li>
-      <li>Improved collaboration and reduced errors.</li>
-    </ul>
-
-    <p class="project-title">Satellite Classification System</p>
-    <p class="project-role">Jun 2023 – Aug 2023</p>
-    <ul>
-      <li>Java-based system using CelesTrak API.</li>
-      <li>Automated satellite data analysis.</li>
-    </ul>
-
-    <p class="project-title">MCL Language Parser</p>
-    <p class="project-role">Mar 2024 – Aug 2024</p>
-    <ul>
-      <li>C++ parser for a custom programming language.</li>
-      <li>Foundation for compiler development.</li>
-    </ul>
+    <p><strong>Bachelor of Science - Information Technology</strong></p>
+    <p>New Jersey Institute of Technology | Spring 2026</p>
   </div>
 
 </div>
