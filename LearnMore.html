@@ -1,63 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn More | Mansi Sangani</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Sangani | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
 
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    margin: 20px;
-  }
-  h2 { font-size: 24px; border-bottom: 2px solid #1c1c1c; padding-bottom: 5px; }
-  .job-title { font-weight: bold; font-size: 18px; margin-top: 20px; }
-  .job-company { font-style: italic; color: #555; margin-bottom: 8px; }
-  ul { margin-left: 20px; }
-  a { text-decoration: none; color: #1f4068; font-weight: bold; }
-  a:hover { text-decoration: underline; }
-</style>
+        header {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f3f4f6;
+        }
+
+        header .logo-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        header .logo-name img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #2563eb;
+            margin: 0;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #1f2937;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        section {
+            padding: 80px 60px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 520px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #2563eb;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .hero-image img {
+            width: 420px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 12px 24px;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .buttons a.secondary {
+            background-color: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .buttons a:hover {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+
+        #projects h3,
+        #skills h3,
+        #contact h3 {
+            text-align: center;
+        }
+
+        .projects, .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+
+        /* CONTACT SECTION */
+        #contact {
+            text-align: center;
+            padding: 80px 60px;
+        }
+
+        #contact .contact-subtitle {
+            color: #6b7280;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: #1f2937;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-item img.contact-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .card {
+            background-color: #f3f4f6;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .card h4 {
+            color: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f3f4f6;
+            color: #6b7280;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            background-color: #f0f8ff;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 750px;
+            margin: 0 auto 20px auto;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat h4 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #1f2937;
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image img {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* ===== SKILLS (PILL STYLE) ===== */
+        .skill-card {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .skill-card h4 {
+            margin-bottom: 15px;
+        }
+
+        .programming h4 { color: #2563eb; }
+        .web h4 { color: #ec4899; }
+        .frameworks h4 { color: #7c3aed; }
+        .tools h4 { color: #059669; }
+        .specialized h4 { color: #dc2626; }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tags span {
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 14px;
+            color: #1f2937;
+        }
+
+        .programming span { background: #dbeafe; }
+        .web span { background: #fce7f3; }
+        .frameworks span { background: #ede9fe; }
+        .tools span { background: #d1fae5; }
+        .specialized span { background: #fee2e2; }
+    </style>
 </head>
-
 <body>
+<header>
+    <div class="logo-name">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">
+        <h1>Mansi Sangani</h1>
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<div class="section">
-  <h2>Experience</h2>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hi, I'm <span class="highlight">Mansi Sangani</span></h2>
+        <p class="subtitle">Information Technology Student at NJIT</p>
+        <p class="description">
+            Providing IT support, troubleshooting systems, and delivering reliable technology solutions
+        </p>
+        <div class="buttons">
+            <a href="#projects">View My Work</a>
+            <a href="#contact" class="secondary">Get In Touch</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="9435.jpeg" alt="Mansi Sangani">
+    </div>
+</section>
 
-  <!-- Network Technician -->
-  <p class="job-title">Network Technician</p>
-  <p class="job-company">Your Organization | September – Present</p>
-  <ul>
-    <li><strong>Network Support:</strong> Troubleshot, diagnosed, and resolved hardware, software, and other network/system issues.</li>
-    <li><strong>Cable Management and Infrastructure:</strong> Terminated Ethernet cables (RJ-45 & Keystone), managed patch panels, installed UPS systems, and monitored 22 network closets (IDF & MDF).</li>
-    <li><strong>VoIP and Communications:</strong> Deployed and managed 700+ Cisco VoIP phones using Cisco Call Manager (CUCM), ensuring seamless campus communication.</li>
-    <li>Participated in disaster recovery operations and implemented security measures to protect network data and systems.</li>
-  </ul>
+<!-- ABOUT -->
+<section id="about">
+    <h3>About Me</h3>
+    <p>
+        I’m an Information Technology student at the New Jersey Institute of Technology (NJIT) with a strong interest in IT support, help desk operations, and technical troubleshooting. I’m passionate about assisting users with technology-related issues and making sure systems function reliably in academic and professional environments.
+    </p>
+    <p>
+        I have hands-on experience supporting Windows and macOS systems, resolving hardware and software issues, and assisting users with common technical problems such as login issues, software installation, and peripheral setup. I enjoy identifying root causes, applying efficient solutions, and minimizing downtime for users.
+    </p>
+    <p>
+        In addition to technical skills, I bring strong communication and customer service abilities to IT support roles. I’m comfortable explaining technical concepts in simple terms, documenting issues and resolutions, and collaborating with team members to escalate or resolve complex problems.
+    </p>
+    <p>
+        Through coursework and practical experience, I’ve developed solid problem-solving, time management, and organizational skills. I adapt quickly to new tools and technologies and stay eager to learn best practices in IT support and systems administration.
+    </p>
+    <p>
+        Outside of my technical work, I enjoy traveling, exploring new places, and staying active through sports. These activities help me maintain balance, adaptability, and a positive mindset, which I bring into my professional work.
+    </p>
+    <div class="stats">
+        <div class="stat">
+            <h4>3+</h4>
+            <p>Major Projects</p>
+        </div>
+        <div class="stat">
+            <h4>10+</h4>
+            <p>Technologies</p>
+        </div>
+        <div class="stat">
+            <h4>NJIT</h4>
+            <p>Current Student</p>
+        </div>
+    </div>
+</section>
 
-  <p><strong>Key Projects & Achievements:</strong></p>
-  <ul>
-    <li><strong>Access Point Upgrade:</strong> Replaced and relocated 274 access points, enhancing campus-wide wireless connectivity.</li>
-    <li><strong>Network Upgrade:</strong> Replaced outdated Cat5 cables with Cat6 in a main building, boosting bandwidth and reliability.</li>
-    <li><strong>Core Switches Upgrade:</strong> Replaced old core switches with high-performance models, improving network efficiency.</li>
-  </ul>
-  <p><strong>Skills:</strong> Networking, Leadership, Troubleshooting, Collaboration, Communication, Project Management, Security, Efficiency</p>
+<!-- PROJECTS -->
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+        <div class="card">
+            <h4>AI-Powered IT Support Assistant</h4>
+            <p>AI-driven help desk system using Python, HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+            <h4>Satellite Classification System</h4>
+            <p>Java application using CelesTrak API for satellite data analysis.</p>
+        </div>
+        <div class="card">
+            <h4>MCL Language Parser</h4>
+            <p>C++ parser for a custom programming language.</p>
+        </div>
+    </div>
+</section>
 
-  <!-- PC Technician -->
-  <p class="job-title">PC Technician / IT Help Desk</p>
-  <p class="job-company">Your Organization | September – Present</p>
-  <ul>
-    <li>Managed high-volume IT help desk calls efficiently.</li>
-    <li>Used Active Directory for account management, handling 70+ requests weekly with focus on security.</li>
-    <li>Assisted staff and students with diverse technical issues, ensuring smooth operations.</li>
-    <li>Re-imaged PCs and laptops, deployed IT equipment to staff, and maintained efficient system performance.</li>
-  </ul>
-  <p><strong>Skills:</strong> Help Desk Support, Technical Troubleshooting, User Support, Customer Service</p>
+<!-- SKILLS -->
+<section id="skills">
+    <h3>Skills</h3>
+    <div class="skills">
+        <div class="skill-card programming">
+            <h4>Programming Languages</h4>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C++</span>
+                <span>C</span>
+                <span>SQL</span>
+            </div>
+        </div>
+        <div class="skill-card web">
+            <h4>Web Development</h4>
+            <div class="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+        <div class="skill-card tools">
+            <h4>Tools & Platforms</h4>
+            <div class="skill-tags">
+                <span>Git</span>
+                <span>VS Code</span>
+                <span>Microsoft Office</span>
+            </div>
+        </div>
+        <div class="skill-card specialized">
+            <h4>Specialized Skills</h4>
+            <div class="skill-tags">
+                <span>IT Support</span>
+                <span>Troubleshooting</span>
+                <span>Customer Support</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <br>
-  <a href="index.html">← Back to Home</a>
-</div>
+<!-- CONTACT -->
+<section id="contact">
+    <h3>Get In Touch</h3>
+    <p class="contact-subtitle">
+        Let's connect and discuss opportunities, collaborations, or just chat about technology
+    </p>
+    <div class="contact-info">
+        <div class="contact-item">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="contact-icon">
+            <span>Email: <a href="mailto:Sanganimansi18@gmail.com">Sanganimansi18@gmail.com</a></span>
+        </div>
+        <div class="contact-item">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="contact-icon">
+            <span>LinkedIn: <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">linkedin.com/in/mansi-sangani-82b192263</a></span>
+        </div>
+        <div class="contact-item">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="contact-icon">
+            <span>GitHub: <a href="https://github.com/mansi961" target="_blank">github.com/mansi961</a></span>
+        </div>
+    </div>
+</section>
 
+<footer>
+    © 2025 Mansi Sangani. All rights reserved.
+</footer>
 </body>
 </html>
