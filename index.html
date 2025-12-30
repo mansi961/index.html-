@@ -108,23 +108,6 @@
             color: #2563eb;
         }
 
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .stat h4 {
-            font-size: 28px;
-            color: #2563eb;
-        }
-        #about {
-    background-color: #2563eb; /* This is the same blue as your headings/buttons */
-    color: #ffffff; /* Make text readable on blue background */
-    padding: 80px 60px; /* Keep the same spacing */
-}
-
         .projects, .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -153,6 +136,37 @@
             text-decoration: none;
         }
 
+        /* ABOUT SECTION */
+        #about {
+            background-color: #dbeafe; /* light blue */
+            color: #1f2937; /* dark text for readability */
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 750px;
+            margin: 0 auto 20px auto;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat h4 {
+            font-size: 28px;
+            color: #2563eb; /* blue for numbers */
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #1f2937; /* dark text for labels */
+            margin: 0;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .hero {
@@ -163,6 +177,11 @@
             .hero-image img {
                 width: 100%;
                 max-width: 350px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
             }
         }
     </style>
@@ -204,7 +223,7 @@
 <section id="about">
     <h3>About Me</h3>
     <p>
-I’m an Information Technology student at the New Jersey Institute of Technology (NJIT) with a strong interest in IT support, help desk operations, and technical troubleshooting. I’m passionate about assisting users with technology-related issues and making sure systems function reliably in academic and professional environments.
+        I’m an Information Technology student at the New Jersey Institute of Technology (NJIT) with a strong interest in IT support, help desk operations, and technical troubleshooting. I’m passionate about assisting users with technology-related issues and making sure systems function reliably in academic and professional environments.
     </p>
     <p>
         I have hands-on experience supporting Windows and macOS systems, resolving hardware and software issues, and assisting users with common technical problems such as login issues, software installation, and peripheral setup. I enjoy identifying root causes, applying efficient solutions, and minimizing downtime for users.
