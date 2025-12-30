@@ -4,34 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansi Sangani | Portfolio</title>
-
     <style>
-        body {
+        /* Reset & base styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff;
-            color: #111827;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
             line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         header {
-            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f3f4f6;
+            padding: 20px 60px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         header h1 {
-            font-size: 22px;
+            font-size: 24px;
             color: #2563eb;
         }
 
         nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #111827;
-            font-size: 15px;
+            margin-left: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937;
         }
 
         nav a:hover {
@@ -42,13 +56,13 @@
             padding: 80px 60px;
         }
 
-        /* HERO TWO-COLUMN STYLE */
+        /* HERO TWO-COLUMN */
         .hero-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 60px;
             flex-wrap: wrap;
+            gap: 50px;
         }
 
         .hero-text {
@@ -56,13 +70,13 @@
         }
 
         .hero-text h2 {
-            font-size: 44px;
-            margin-bottom: 15px;
+            font-size: 48px;
             color: #111827;
+            margin-bottom: 15px;
         }
 
         .hero-text p {
-            font-size: 18px;
+            font-size: 20px;
             color: #4b5563;
         }
 
@@ -72,13 +86,13 @@
 
         .buttons a {
             display: inline-block;
-            margin: 10px 10px 0 0;
-            padding: 12px 24px;
+            margin-right: 15px;
+            padding: 14px 28px;
             background-color: #2563eb;
             color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
             font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
         .buttons a:hover {
@@ -98,10 +112,11 @@
             border: 5px solid #2563eb;
         }
 
-        h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: #2563eb;
+        /* About section */
+        #about p {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #374151;
         }
 
         .stats {
@@ -116,6 +131,7 @@
             color: #2563eb;
         }
 
+        /* Projects & Skills */
         .projects, .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,25 +139,34 @@
         }
 
         .card {
-            background-color: #f3f4f6;
+            background-color: #ffffff;
             padding: 25px;
             border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card h4 {
             color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        /* Contact Section */
+        #contact a {
+            color: #2563eb;
+            font-weight: 500;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            background-color: #f3f4f6;
-            color: #4b5563;
-        }
-
-        footer a {
-            color: #2563eb;
-            text-decoration: none;
+            background-color: #ffffff;
+            color: #6b7280;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
         }
 
         @media (max-width: 900px) {
@@ -151,8 +176,6 @@
             }
 
             .hero-image img {
-                width: 220px;
-                height: 220px;
                 margin-bottom: 20px;
             }
         }
@@ -173,7 +196,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -188,20 +210,14 @@
 
 <section class="hero">
     <div class="hero-container">
-        <!-- LEFT TEXT -->
         <div class="hero-text">
             <h2>Hi, I'm Mansi Sangani</h2>
-            <p>
-                Information Technology Student at NJIT<br>
-                Supporting users, building systems, and creating practical technology solutions.
-            </p>
+            <p>Information Technology Student at NJIT<br>Building IT solutions, supporting users, and developing software systems.</p>
             <div class="buttons">
                 <a href="#projects">View My Work</a>
                 <a href="#contact">Get In Touch</a>
             </div>
         </div>
-
-        <!-- RIGHT IMAGE -->
         <div class="hero-image">
             <img src="9435.jpeg" alt="Mansi Sangani">
         </div>
@@ -210,15 +226,8 @@
 
 <section id="about">
     <h3>About Me</h3>
-    <p>
-        I’m a detail-oriented Information Technology student at the New Jersey Institute of Technology
-        with hands-on experience in IT support, technical troubleshooting, and software development.
-        I enjoy building reliable, user-focused solutions that improve system performance and user experience.
-    </p>
-    <p>
-        My interests include IT support systems, web applications, and programming. Through academic projects
-        and professional experience, I’ve developed strong analytical, communication, and collaboration skills.
-    </p>
+    <p>I'm a detail-oriented Information Technology student at NJIT with hands-on experience in IT support, troubleshooting, and software development.</p>
+    <p>My expertise spans IT support systems, web applications, and programming. I have strong analytical, communication, and teamwork skills.</p>
 
     <div class="stats">
         <div class="stat">
@@ -241,26 +250,17 @@
     <div class="projects">
         <div class="card">
             <h4>AI-Powered IT Support Assistant</h4>
-            <p>
-                Built an AI-driven help desk system to automate ticket classification and troubleshooting
-                using Python, with a responsive web interface.
-            </p>
+            <p>Built an AI-driven help desk system to automate ticket classification and troubleshooting using Python, with a responsive web interface.</p>
         </div>
 
         <div class="card">
             <h4>Satellite Classification System</h4>
-            <p>
-                Developed a Java application that retrieves and analyzes satellite data from the CelesTrak API,
-                improving reporting efficiency.
-            </p>
+            <p>Developed a Java application to retrieve and analyze satellite data from the CelesTrak API, improving reporting efficiency.</p>
         </div>
 
         <div class="card">
             <h4>MCL Language Parser</h4>
-            <p>
-                Created a C++ parser for a custom programming language, converting source code into structured
-                representations for compilers and interpreters.
-            </p>
+            <p>Created a C++ parser for a custom programming language, converting source code into structured representations for compilers and interpreters.</p>
         </div>
     </div>
 </section>
@@ -269,7 +269,7 @@
     <h3>Skills</h3>
     <div class="skills">
         <div class="card">
-            <h4>Programming</h4>
+            <h4>Programming Languages</h4>
             <p>Python, Java, C++, C, HTML, CSS</p>
         </div>
 
@@ -279,7 +279,7 @@
         </div>
 
         <div class="card">
-            <h4>Tools</h4>
+            <h4>Tools & Platforms</h4>
             <p>Git, VS Code, Microsoft Office</p>
         </div>
 
