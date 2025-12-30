@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansi Sangani | Portfolio</title>
+
     <style>
         body {
             margin: 0;
@@ -43,6 +44,15 @@
 
         .hero {
             text-align: center;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            margin-bottom: 20px;
         }
 
         .hero h2 {
@@ -119,8 +129,24 @@
             color: #38bdf8;
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 60px 25px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -134,9 +160,13 @@
 </header>
 
 <section class="hero">
+    <img src="9435.jpeg" alt="Mansi Sangani" class="profile-photo">
+
     <h2>Hi, I'm Mansi Sangani</h2>
-    <p>Information Technology Student at NJIT<br>
-       Supporting users, building systems, and creating practical technology solutions.</p>
+    <p>
+        Information Technology Student at NJIT <br>
+        Supporting users, building systems, and creating practical technology solutions.
+    </p>
 
     <div class="buttons">
         <a href="#projects">View My Work</a>
@@ -153,8 +183,7 @@
     </p>
     <p>
         My interests include IT support systems, web applications, and programming. Through academic projects
-        and professional experience, I’ve developed strong analytical, communication, and collaboration skills
-        in fast-paced environments.
+        and professional experience, I’ve developed strong analytical, communication, and collaboration skills.
     </p>
 
     <div class="stats">
@@ -180,7 +209,7 @@
             <h4>AI-Powered IT Support Assistant</h4>
             <p>
                 Built an AI-driven help desk system to automate ticket classification and troubleshooting
-                using Python, with a responsive web interface built using HTML, CSS, and JavaScript.
+                using Python, with a responsive web interface.
             </p>
         </div>
 
@@ -188,7 +217,7 @@
             <h4>Satellite Classification System</h4>
             <p>
                 Developed a Java application that retrieves and analyzes satellite data from the CelesTrak API,
-                improving reporting efficiency through automated data processing.
+                improving reporting efficiency.
             </p>
         </div>
 
@@ -222,7 +251,7 @@
 
         <div class="card">
             <h4>Soft Skills</h4>
-            <p>Problem Solving, Teamwork, Adaptability, Public Speaking</p>
+            <p>Problem Solving, Teamwork, Adaptability, Communication</p>
         </div>
     </div>
 </section>
