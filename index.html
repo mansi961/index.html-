@@ -185,6 +185,43 @@
             }
         }
     </style>
+    /* ===== SKILLS (PILL STYLE) ===== */
+.skill-card {
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.skill-card h4 {
+    margin-bottom: 15px;
+}
+
+.programming h4 { color: #2563eb; }
+.web h4 { color: #ec4899; }
+.frameworks h4 { color: #7c3aed; }
+.tools h4 { color: #059669; }
+.specialized h4 { color: #dc2626; }
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.programming span { background: #dbeafe; }
+.web span { background: #fce7f3; }
+.frameworks span { background: #ede9fe; }
+.tools span { background: #d1fae5; }
+.specialized span { background: #fee2e2; }
+
 </head>
 
 <body>
@@ -276,25 +313,48 @@
 <!-- SKILLS -->
 <section id="skills">
     <h3>Skills</h3>
+
     <div class="skills">
-        <div class="card">
-            <h4>Programming</h4>
-            <p>Python, Java, C++, C, HTML, CSS</p>
+        <div class="skill-card programming">
+            <h4>Programming Languages</h4>
+            <div class="skill-tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C++</span>
+                <span>C</span>
+                <span>SQL</span>
+            </div>
         </div>
-        <div class="card">
-            <h4>IT & Systems</h4>
-            <p>Windows, macOS, IT Support, Troubleshooting</p>
+
+        <div class="skill-card web">
+            <h4>Web Development</h4>
+            <div class="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
         </div>
-        <div class="card">
-            <h4>Tools</h4>
-            <p>Git, VS Code, Microsoft Office</p>
+
+        <div class="skill-card tools">
+            <h4>Tools & Platforms</h4>
+            <div class="skill-tags">
+                <span>Git</span>
+                <span>VS Code</span>
+                <span>Microsoft Office</span>
+            </div>
         </div>
-        <div class="card">
-            <h4>Soft Skills</h4>
-            <p>Problem Solving, Teamwork, Adaptability</p>
+
+        <div class="skill-card specialized">
+            <h4>Specialized Skills</h4>
+            <div class="skill-tags">
+                <span>IT Support</span>
+                <span>Troubleshooting</span>
+                <span>Customer Support</span>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact">
