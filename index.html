@@ -108,10 +108,18 @@
             color: #2563eb;
         }
 
+        /* Center section headings */
+        #projects h3,
+        #skills h3,
+        #contact h3 {
+            text-align: center;
+        }
+
         .projects, .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            justify-content: center; /* center items in the grid */
         }
 
         .card {
