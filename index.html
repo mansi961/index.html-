@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansi Sangani | Portfolio</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #ffffff; /* changed from black to white */
-            color: #1f2937; /* dark text for white background */
+            background-color: #ffffff;
+            color: #1f2937;
             line-height: 1.6;
         }
 
@@ -18,7 +19,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f3f4f6; /* lighter header for white background */
+            background-color: #f3f4f6;
         }
 
         header h1 {
@@ -41,36 +42,47 @@
             padding: 80px 60px;
         }
 
+        /* HERO SECTION */
         .hero {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
         }
 
-        .hero img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #2563eb;
-            margin-bottom: 20px;
+        .hero-text {
+            max-width: 520px;
         }
 
         .hero h2 {
-            font-size: 42px;
+            font-size: 48px;
             margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #4b5563;
+        .highlight {
+            color: #2563eb;
         }
 
-        .buttons {
-            margin-top: 25px;
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .hero-image img {
+            width: 420px;
+            border-radius: 12px;
+            object-fit: cover;
         }
 
         .buttons a {
             display: inline-block;
-            margin: 10px;
+            margin-right: 15px;
             padding: 12px 24px;
             background-color: #2563eb;
             color: #ffffff;
@@ -79,8 +91,15 @@
             font-weight: bold;
         }
 
+        .buttons a.secondary {
+            background-color: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
         .buttons a:hover {
             background-color: #1d4ed8;
+            color: #ffffff;
         }
 
         h3 {
@@ -108,7 +127,7 @@
         }
 
         .card {
-            background-color: #f3f4f6; /* changed from black to light card */
+            background-color: #f3f4f6;
             padding: 25px;
             border-radius: 10px;
         }
@@ -128,8 +147,22 @@
             color: #2563eb;
             text-decoration: none;
         }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image img {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -142,20 +175,37 @@
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <img src="9435.jpeg" alt="Mansi Sangani Profile Photo">
-    <h2>Hi, I'm Mansi Sangani</h2>
-    <p>Information Technology Student at NJIT<br> Supporting users, building systems, and creating practical technology solutions.</p>
-    <div class="buttons">
-        <a href="#projects">View My Work</a>
-        <a href="#contact">Get In Touch</a>
+    <div class="hero-text">
+        <h2>Hi, I'm <span class="highlight">Mansi Sangani</span></h2>
+        <p class="subtitle">Information Technology Student at NJIT</p>
+        <p class="description">
+            Supporting users, building systems, and creating practical technology solutions.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects">View My Work</a>
+            <a href="#contact" class="secondary">Get In Touch</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="9435.jpeg" alt="Mansi Sangani">
     </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
     <h3>About Me</h3>
-    <p> I’m a detail-oriented Information Technology student at the New Jersey Institute of Technology with hands-on experience in IT support, technical troubleshooting, and software development. I enjoy building reliable, user-focused solutions that improve system performance and user experience. </p>
-    <p> My interests include IT support systems, web applications, and programming. Through academic projects and professional experience, I’ve developed strong analytical, communication, and collaboration skills in fast-paced environments. </p>
+    <p>
+        I’m a detail-oriented Information Technology student at the New Jersey Institute of Technology
+        with hands-on experience in IT support, technical troubleshooting, and software development.
+    </p>
+    <p>
+        My interests include IT support systems, web applications, and programming. I enjoy building
+        reliable, user-focused solutions.
+    </p>
 
     <div class="stats">
         <div class="stat">
@@ -173,24 +223,26 @@
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
     <h3>Projects</h3>
     <div class="projects">
         <div class="card">
             <h4>AI-Powered IT Support Assistant</h4>
-            <p> Built an AI-driven help desk system to automate ticket classification and troubleshooting using Python, with a responsive web interface built using HTML, CSS, and JavaScript. </p>
+            <p>AI-driven help desk system using Python, HTML, CSS, and JavaScript.</p>
         </div>
         <div class="card">
             <h4>Satellite Classification System</h4>
-            <p> Developed a Java application that retrieves and analyzes satellite data from the CelesTrak API, improving reporting efficiency through automated data processing. </p>
+            <p>Java application using CelesTrak API for satellite data analysis.</p>
         </div>
         <div class="card">
             <h4>MCL Language Parser</h4>
-            <p> Created a C++ parser for a custom programming language, converting source code into structured representations for compilers and interpreters. </p>
+            <p>C++ parser for a custom programming language.</p>
         </div>
     </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
     <h3>Skills</h3>
     <div class="skills">
@@ -200,7 +252,7 @@
         </div>
         <div class="card">
             <h4>IT & Systems</h4>
-            <p>Windows, macOS, IT Support, Troubleshooting, Systems Analysis</p>
+            <p>Windows, macOS, IT Support, Troubleshooting</p>
         </div>
         <div class="card">
             <h4>Tools</h4>
@@ -208,11 +260,12 @@
         </div>
         <div class="card">
             <h4>Soft Skills</h4>
-            <p>Problem Solving, Teamwork, Adaptability, Public Speaking</p>
+            <p>Problem Solving, Teamwork, Adaptability</p>
         </div>
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <h3>Get In Touch</h3>
     <p>Email: <a href="mailto:Sanganimansi18@gmail.com">Sanganimansi18@gmail.com</a></p>
