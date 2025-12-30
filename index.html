@@ -1,230 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mansi Sangani | IT Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Sangani | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
 
-<!-- Website Tab Logo (Favicon) -->
-<link rel="icon" href="logo.png" type="image/png">
+        header {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #020617;
+        }
 
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    min-height: 100vh;
-    background-color: #f8f9fa;
-    color: #333;
-  }
+        header h1 {
+            font-size: 22px;
+            color: #38bdf8;
+        }
 
-  a { text-decoration: none; color: inherit; }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #e5e7eb;
+            font-size: 15px;
+        }
 
-  /* Sidebar */
-  .sidebar {
-    width: 300px;
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-    overflow-y: auto;
-    align-items: center;
-  }
+        nav a:hover {
+            color: #38bdf8;
+        }
 
-  .sidebar img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    margin-bottom: 15px;
-  }
+        section {
+            padding: 80px 60px;
+        }
 
-  .sidebar h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+        .hero {
+            text-align: center;
+        }
 
-  .sidebar p {
-    margin: 6px 0;
-    font-size: 14px;
-    text-align: center;
-  }
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-  .sidebar a { color: #fff; }
-  .sidebar a:hover { text-decoration: underline; }
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+        }
 
-  .section-title {
-    margin-top: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-    width: 100%;
-    text-align: center;
-  }
+        .buttons {
+            margin-top: 25px;
+        }
 
-  .menu {
-    width: 100%;
-  }
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: #38bdf8;
+            color: #020617;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
 
-  .menu a {
-    display: block;
-    margin: 8px 0;
-    padding: 10px;
-    background-color: #1f4068;
-    border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.3s;
-    border: 1px solid #ffffff30;
-  }
+        .buttons a:hover {
+            background-color: #0ea5e9;
+        }
 
-  .menu a:hover {
-    background-color: #162447;
-  }
+        h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
 
-  .main-content {
-    margin-left: 320px;
-    padding: 40px;
-    flex: 1;
-  }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            text-align: center;
+        }
 
-  .top-image img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
+        .stat h4 {
+            font-size: 28px;
+            color: #38bdf8;
+        }
 
-  .section {
-    margin-bottom: 50px;
-  }
+        .projects, .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-  .section h2 {
-    font-size: 22px;
-    border-bottom: 2px solid #1c1c1c;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-  }
+        .card {
+            background-color: #020617;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-  .job-title, .project-title {
-    font-weight: bold;
-    font-size: 18px;
-  }
+        .card h4 {
+            color: #38bdf8;
+        }
 
-  .job-company, .project-role {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 8px;
-  }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #020617;
+            color: #94a3b8;
+        }
 
-  ul {
-    margin-left: 20px;
-  }
-
-  @media(max-width: 900px) {
-    body { flex-direction: column; }
-    .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-    }
-    .main-content {
-      margin-left: 0;
-      padding: 20px;
-    }
-  }
-</style>
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <h1>Mansi Sangani</h1>
+<header>
+    <h1>Mansi Sangani</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-  <p>
-    Motivated final-year Information Technology student with hands-on experience in IT support,
-    network troubleshooting, and full stack web development. Skilled in assisting users with
-    hardware and software issues, supporting network infrastructure, and developing web
-    applications using modern technologies. Seeking an opportunity where I can contribute to
-    reliable IT operations, enhance system efficiency, and continue growing my technical and
-    problem-solving skills while delivering effective user-focused technology solutions.
-  </p>
+<section class="hero">
+    <h2>Hi, I'm Mansi Sangani</h2>
+    <p>Information Technology Student at NJIT<br>
+       Supporting users, building systems, and creating practical technology solutions.</p>
 
-  <div class="section-title">Skills</div>
-  <p><strong>Programming:</strong> Python, Java, C++, C, HTML, CSS, JavaScript</p>
-  <p><strong>Tools:</strong> Windows/macOS, Microsoft Office, Git, Networking</p>
+    <div class="buttons">
+        <a href="#projects">View My Work</a>
+        <a href="#contact">Get In Touch</a>
+    </div>
+</section>
 
-  <div class="section-title">Navigation</div>
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="Resume.docx">Resume</a>
-    <a href="certifications.html">Certifications</a>
-  </div>
+<section id="about">
+    <h3>About Me</h3>
+    <p>
+        I’m a detail-oriented Information Technology student at the New Jersey Institute of Technology
+        with hands-on experience in IT support, technical troubleshooting, and software development.
+        I enjoy building reliable, user-focused solutions that improve system performance and user experience.
+    </p>
+    <p>
+        My interests include IT support systems, web applications, and programming. Through academic projects
+        and professional experience, I’ve developed strong analytical, communication, and collaboration skills
+        in fast-paced environments.
+    </p>
 
-  <div class="section-title">Connect</div>
-  <p>🔗 <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">LinkedIn</a></p>
-  <p>💻 <a href="https://github.com/mansi961" target="_blank">GitHub</a></p>
-</div>
+    <div class="stats">
+        <div class="stat">
+            <h4>3+</h4>
+            <p>Major Projects</p>
+        </div>
+        <div class="stat">
+            <h4>10+</h4>
+            <p>Technologies</p>
+        </div>
+        <div class="stat">
+            <h4>NJIT</h4>
+            <p>Current Student</p>
+        </div>
+    </div>
+</section>
 
-<!-- Main Content -->
-<div class="main-content">
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+        <div class="card">
+            <h4>AI-Powered IT Support Assistant</h4>
+            <p>
+                Built an AI-driven help desk system to automate ticket classification and troubleshooting
+                using Python, with a responsive web interface built using HTML, CSS, and JavaScript.
+            </p>
+        </div>
 
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Science - Information Technology (Web Applications)</strong></p>
-    <p>New Jersey Institute of Technology | Expected Graduation: Spring 2026</p>
-    <p>GPA: 3.0 | Dean's List (Spring 2025) | EOP Student</p>
-  </div>
+        <div class="card">
+            <h4>Satellite Classification System</h4>
+            <p>
+                Developed a Java application that retrieves and analyzes satellite data from the CelesTrak API,
+                improving reporting efficiency through automated data processing.
+            </p>
+        </div>
 
-  <div class="section">
-    <h2>Experience</h2>
-    <p class="job-title">IT Support / Help Desk Technician</p>
-    <p class="job-company">Hudson County Community College | Aug 2025 – Present</p>
-    <ul>
-      <li>Provided technical support for classroom technology and user systems.</li>
-      <li>Troubleshot hardware and software issues.</li>
-      <li>Collaborated with IT team to maintain campus operations.</li>
-    </ul>
-    <a href="LearnMore.html" class="btn btn-outline-primary">Learn More</a>
-  </div>
+        <div class="card">
+            <h4>MCL Language Parser</h4>
+            <p>
+                Created a C++ parser for a custom programming language, converting source code into structured
+                representations for compilers and interpreters.
+            </p>
+        </div>
+    </div>
+</section>
 
+<section id="skills">
+    <h3>Skills</h3>
+    <div class="skills">
+        <div class="card">
+            <h4>Programming</h4>
+            <p>Python, Java, C++, C, HTML, CSS</p>
+        </div>
 
-  <div class="section">
-    <h2>Academic / Personal Projects</h2>
+        <div class="card">
+            <h4>IT & Systems</h4>
+            <p>Windows, macOS, IT Support, Troubleshooting, Systems Analysis</p>
+        </div>
 
-    <p class="project-title">Automated Code Review Tool</p>
-    <p class="project-role">Mar 2024 – Aug 2024</p>
-    <ul>
-      <li>GitHub-integrated tool for instant code feedback.</li>
-      <li>Improved collaboration and reduced errors.</li>
-    </ul>
+        <div class="card">
+            <h4>Tools</h4>
+            <p>Git, VS Code, Microsoft Office</p>
+        </div>
 
-    <p class="project-title">Satellite Classification System</p>
-    <p class="project-role">Jun 2023 – Aug 2023</p>
-    <ul>
-      <li>Java-based system using CelesTrak API.</li>
-      <li>Automated satellite data analysis.</li>
-    </ul>
+        <div class="card">
+            <h4>Soft Skills</h4>
+            <p>Problem Solving, Teamwork, Adaptability, Public Speaking</p>
+        </div>
+    </div>
+</section>
 
-    <p class="project-title">MCL Language Parser</p>
-    <p class="project-role">Mar 2024 – Aug 2024</p>
-    <ul>
-      <li>C++ parser for a custom programming language.</li>
-      <li>Foundation for compiler development.</li>
-    </ul>
-            <a href="Projects.html" class="btn btn-outline-primary">Learn More</a>
+<section id="contact">
+    <h3>Get In Touch</h3>
+    <p>Email: <a href="mailto:Sanganimansi18@gmail.com">Sanganimansi18@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/mansi-sangani-82b192263" target="_blank">linkedin.com/in/mansi-sangani-82b192263</a></p>
+    <p>GitHub: <a href="https://github.com/mansi961" target="_blank">github.com/mansi961</a></p>
+</section>
 
-  </div>
-
-</div>
+<footer>
+    © 2025 Mansi Sangani. All rights reserved.
+</footer>
 
 </body>
 </html>
